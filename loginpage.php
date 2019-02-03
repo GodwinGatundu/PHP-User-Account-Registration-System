@@ -48,6 +48,8 @@
         
         if ($rows > 0) {
             if ($user && password_verify($_POST['password'], $user['password'])){
+              //in the database, you'll have a user_type field that will have the integer '1' to signify the user is an admin
+              //user with an empty value, that is a normal user
               if (!$user['type'] == 1 || $user['type'] == " ") {
                 
                 //session info
